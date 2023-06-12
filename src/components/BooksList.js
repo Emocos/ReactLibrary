@@ -1,11 +1,27 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import Book from "./Book";
+
 const BooksList = () => {
     return (
-        <div>
-
+        <div className={'d-flex flex-wrap gap-3 justify-content-center'}>
+            <Book/>
+            <Book/>
+            <Book/>
+            <Book/>
+            <Book/>
+            <Book/>
+            <Book/>
+            <Book/>
+            <Book/>
+            <Book/>
+            <Book/>
+            <Book/>
+            <Book/>
+            <Book/>
+            <Book/>
+            <Book/>
+            <Book/>
+            <Book/>
         </div>
     );
 };
