@@ -12,8 +12,8 @@ const Book = ({id, author, name, count, description}) => {
             >
                 <Card.Header>{author}</Card.Header>
                 <Card.Body >
-                    <Card.Title className={''}>{name}</Card.Title>
-                    <Card.Text className={'cardBody'}>
+                    <Card.Title className={'cardTitle'}>{name}</Card.Title>
+                    <Card.Text className={'cardText'}>
                         {description}
                     </Card.Text>
                     <h3>{count}</h3>
