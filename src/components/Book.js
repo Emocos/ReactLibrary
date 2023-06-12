@@ -1,22 +1,22 @@
 import React from 'react';
 import {Card} from "react-bootstrap";
 
-const Book = () => {
+const Book = ({id, author, name, count, description}) => {
     return (
         <div>
             <Card
                 bg={'dark'}
                 text={'white'}
-                style={{ width: '18rem' }}
+                style={{ width: '18rem', height: 'max-content'}}
                 className="mb-2"
             >
-                <Card.Header>Header</Card.Header>
-                <Card.Body>
-                    <Card.Title>Dark Card Title </Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
+                <Card.Header>{author}</Card.Header>
+                <Card.Body >
+                    <Card.Title className={''}>{name}</Card.Title>
+                    <Card.Text className={'cardBody'}>
+                        {description}
                     </Card.Text>
+                    <h3>{count}</h3>
                 </Card.Body>
             </Card>
         </div>
