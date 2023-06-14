@@ -6,11 +6,11 @@ const NavPage = () => {
     return (
         <Container className={'h-100 w-100'}>
             <Row className={'justify-content-center align-items-center h-100'}>
-                <Col md={{span: 3}}>
-                    <MyLink name={"Library"} url={'library'} bootstrapClass={'btn btn-outline-light w-100'}/>
+                <Col sm={{span: 3}}>
+                    <MyLink name={"Library"} url={'library'} />
                 </Col>
-                <Col md={{span: 3}}>
-                    <MyLink name={"Users"} url={'users'} bootstrapClass={'btn btn-outline-light w-100'}/>
+                <Col sm={{span: 3}}>
+                    <MyLink name={"Users"} url={'users'} />
                 </Col>
             </Row>
         </Container>

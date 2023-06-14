@@ -10,10 +10,10 @@ export const router = createBrowserRouter([
     },
     {
         path: 'library',
-        element: <Library/>
+        element: <Library/>,
     },
     {
         path: 'users',
         element: <Users/>
-    }
+    },
 ])
