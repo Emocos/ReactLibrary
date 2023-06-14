@@ -1,10 +1,9 @@
 import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
 import {useDispatch, useSelector} from "react-redux";
 import {provideBook} from "../store/usersSlice";
 import {provideToUser} from "../store/booksSlice";
 
-function BasicButtonExample() {
+function DropDown() {
     const users = useSelector(state => state.users.users)
     const book = useSelector(state => state.books.temp)
     const {bookName, bookId, count} = book
@@ -34,4 +33,4 @@ function BasicButtonExample() {
     );
 }
 
-export default BasicButtonExample;
+export default DropDown;

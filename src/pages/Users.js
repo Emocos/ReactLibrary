@@ -7,7 +7,6 @@ import {useSelector} from "react-redux";
 const Users = () => {
     const [modalShow, setModalShow] = React.useState(false);
     const users = useSelector(state => state.users.users)
-    console.log(users)
     const [index, setIndex] = useState(0)
 
     return (

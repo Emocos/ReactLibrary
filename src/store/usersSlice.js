@@ -25,19 +25,18 @@ export const usersSlice = createSlice({
         ]
     },
     reducers: {
-        editUser(state, action) {
-            let user = state.users.find(user => user.userId === action.payload.userId)
-            // user = action.payload
-            console.log(user)
-        },
         provideBook(state, action) {
             let user = state.users.find(user => user.userId === action.payload.userId)
             user.books.push(action.payload.bookName)
             user.booksCount++
-            console.log(action.payload)
+        },
+        returnBookFromUser(state, action) {
+            let user = state.users.find(user => user.userId === action.payload.userId)
+            user.books = user.books.filter(book => book !== action.payload.book)
+            user.booksCount--
         }
     }
 })
 
-export const {editUser, provideBook} = usersSlice.actions
+export const {provideBook, returnBookFromUser} = usersSlice.actions
 export default usersSlice.reducer

@@ -82,20 +82,24 @@ export const booksSlice = createSlice({
             let book = state.books.find(book => book.bookId === action.payload.bookId)
             book = action.payload
             state.temp = book
-            // console.log(state.temp)
-            // return book;
-            // state.books = state.books.filter(book => book.bookId !== action.payload.bookId)
         },
         deleteBook(state, action) {
             state.books = state.books.filter(book => book.bookId !== action.payload)
-            console.log(action.payload)
         },
         provideToUser(state, action) {
             let book = state.books.find(book => book.bookId === action.payload.bookId)
             book.count--
+        },
+        returnBookToLibrary(state, {payload}) {
+            let book = state.books.find(book => book.bookName === payload);
+            book.count = book.count+1
+        },
+        saveEdit (state, {payload}) {
+            const book = state.books.find(elem => elem.bookId === payload.id)
+            book.bookDescription = payload.value
         }
     }
 })
 
-export const {editBook, deleteBook,provideToUser} = booksSlice.actions
+export const {editBook, deleteBook,provideToUser, returnBookToLibrary, saveEdit} = booksSlice.actions
 export default booksSlice.reducer
