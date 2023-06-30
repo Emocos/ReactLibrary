@@ -47,7 +47,7 @@ const BookDialogWindow = (props) => {
                 <DropDown/>
                 <br/>
                 <MyBtn name={'Delete'} onClick={() => {
-                    if(book.booksCount > 9) {
+                    if(book.count > 9) {
                         dispatch(deleteBook(book.bookId))
                     } else {
                         notify()
